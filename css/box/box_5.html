@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin</title>
+    <style>
+        /* 
+        1. 垂直方向相邻元素都设置 margin 时 会进行合并，以最大的那个 margin属性值为准 
+        */
+        body{
+            margin: 0;
+        }
+        .test{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 0 0 20px 0;
+        }
+        .one{
+            width: 300px;
+            height: 300px;
+            background-color: aquamarine;
+            margin: 10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class=test> margin属性 </div>
+    <div class="one">This is one div</div>
+</body>
+</html>

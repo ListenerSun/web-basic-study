@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        1. display 属性 设置为inline 元素 显示为  内联元素，元素前后没有换行符
+            设置成内联元素之后:
+                a)  width 和 height 属性无效
+                b) 水平方向 margin-left/margin-right/padding-left/pdding-right 有效
+                c) 垂直方向 margin/padding属性无效
+        2.  display 属性 设置为block 元素将显示为块级元素，元素前后带有换行符
+            设置成块级元素后:
+                a) width/height/margin/padding 属性都生效
+
+        3. display 属性 设置为 inline-block 元素显示为行内块元素  既有行的属性 块级元素属性也生效
+        4. display 属性 设置为 none 表示 该元素 不显示
+         */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin-top: 10px;
+            display: inline;
+        }
+
+        span {
+            background-color: gray;
+            display: block;
+            margin-top: 10px;
+            height: 100px;;
+        }
+
+        p{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            display: inline-block;
+        }
+
+        .a{
+            display: none;
+        }
+        a:hover ul{display: inline;}
+    </style>
+</head>
+
+<body>
+    <!-- 行内元素-->
+    <span>行内元素-span1</span>
+    <span>行内元素-span2</span>
+    <span>行内元素-span3</span>
+    <!-- 块级元素  -->
+    <div> 块级元素-div1</div>
+    <div> 块级元素-div2</div>
+    <div> 块级元素-div3</div>
+    <hr></hr>
+    <p> 块级元素-p1</p>
+    <p> 块级元素-p2</p>
+    <p> 块级元素-p3</p>
+    <hr></hr>
+    <a href="" >指我显示元素
+        <ul class="a">我藏起来了</ul>
+    </a>
+    
+
+</body>
+
+</html>

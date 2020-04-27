@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型计算</title>
+    <style>
+        /* 
+        1. 整个盒子 所占的宽度为  左边距 + 左边框 + 左填充 + 内容宽度 + 右填充 + 右边框 + 右边距
+        所占高度: 上边距 + 上边框 + 上填充 + 内容高度 + 下填充 + 下边框 + 下边距
+        2. 块级元素  占一行
+                块级元素标签: <p> </p> <div></div> <ul></ul> <li></li> 等
+            行内元素: 一行显示
+                <span></span>
+         
+         */
+        .test{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            padding-top: 10px;
+            margin-top: 10px;
+            border: black solid 1px;
+        }
+        .test2{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            padding-top: 10px;
+            margin-top: 10px;
+            border: black solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test">这是一个盒子</div>
+    <div class="test2">这是一个盒子</div>
+</body>
+</html>

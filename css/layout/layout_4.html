@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>混合布局</title>
+    <style>
+        body{ margin: 0; padding: 0;}
+        .header{
+            width: 100%;
+            height: 70px;
+            background-color: gray;
+            text-align: center;
+            line-height: 80px;
+            position: fixed;
+        }
+        .container{
+            width: 100%;
+            height: 900px;
+            padding-top: 70px;
+        }
+        .container .left{
+            width: 20%;
+            height: 900px;
+            background-color: aquamarine;
+            float: left;
+        }
+        .container .right{
+            width: 80%;
+            height: 900px;
+            background-color: cornsilk;
+            float: right;
+        }
+        .footer{
+            width: 100%;
+            height: 50px;
+            background-color: salmon;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header"> this is header</div>
+    <div class="container">
+        <div class="left"> this is left this is left this is left</div>
+        <div class="right">this is right this is right this is right</div>
+    </div>
+    <div class="footer">this is footer this is footer</div>
+    
+
+
+</body>
+
+</html>

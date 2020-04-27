@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理解相对定位 绝对定位</title>
+    <style>
+        /* 
+            1. 绝对定位元素脱离正常流(文档流)，所以元素原来的位置会被其他元素占用。
+            2. 因为绝对定位元素脱离了正常流，和相对元素一样也会有覆盖其他元素的情况。
+            3. 绝对定位元素是相对于祖先元素，和相对定位不同，相对定位是相对于元素自己原来的位置。
+            4. 绝对定位元素的祖先元素是设置的position: static，该祖先元素并不作为参考物。
+            5. 绝对定位元素的祖先元素有多个都设置了position: absolute或position: relative ,
+            6. 那么是以最近的一个祖先元素作为参考物，即相对于最近的那一个祖先元素进行移动定位。
+        
+        将 two 标签的 position设置为 relative 时， 元素位置不会被覆盖
+        将 two 标签的 position设置为 absolute 时， 元素位置会被覆盖
+        */
+        body {
+            position: relative;
+        }
+
+        div {
+            width: 60px;
+            height: 60px;
+        }
+
+        .one {
+            background-color: lightgrey;
+        }
+
+        .two {
+            background-color: lightpink;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        .three {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+
+</body>
+
+</html>

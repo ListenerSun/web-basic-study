@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对定位 绝对定位区别</title>
+    <style>
+        /* 
+        1. 如果父标签 没有定位属性(position) 子标签使用  relative 相对定位时 按照当前页面定位
+        2. 如果父标签 没有定位属性(position) 子标签使用  absolute 绝对定位时 则正常定位
+         */
+        .test{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+        .pre{
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+            /* position: relative; */
+            /* left: 500px; */
+            margin-left: 300px;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="pre">
+        <div class="test"></div>
+    </div>
+    
+</body>
+</html>
